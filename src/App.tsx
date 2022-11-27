@@ -30,21 +30,18 @@ function App() {
         <div
           className="start"
           onClick={() => {
-            setStart(true);
+            setStart(!start);
           }}
         >
-          <p>Start</p>
+          <p>{start ? "Stop" : "Start"}</p>
         </div>
       </div>
       <div className="time">
-        {start === true && (
-          <p>
-            {hours.toString().length === 1 ? `0${hours}` : hours}:
-            {minutes.toString().length === 1 ? `0${minutes}` : minutes}:
-            {seconds.toString().length === 1 ? `0${seconds}` : seconds}
-          </p>
-        )}
-        {start === false && <p>00:00:00</p>}
+        <p>
+          {hours.toString().length === 1 ? `0${hours}` : hours}:
+          {minutes.toString().length === 1 ? `0${minutes}` : minutes}:
+          {seconds.toString().length === 1 ? `0${seconds}` : seconds}
+        </p>
       </div>
     </div>
   );

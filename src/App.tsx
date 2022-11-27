@@ -10,12 +10,15 @@ function App() {
   const seconds = Math.floor(value - (3600 * hours + 60 * minutes));
 
   React.useEffect(() => {
+    if (value === 0) {
+      setStart(false);
+    }
     const timerID = setInterval(
       () => start && setValue(value > 0 ? value - 1 : 0),
       1000
     );
     return () => clearInterval(timerID);
-  });
+  }, [value, start]);
 
   return (
     <div className="App">

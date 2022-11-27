@@ -1,3 +1,50 @@
 .App {
   text-align: center;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+input {
+  padding: 0px 8px;
+  width: 20em;
+  height: 38px;
+  outline: none;
+  border-radius: 12px;
+  font-weight: 600;
+  border: 1px solid rgb(86, 79, 155);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.start {
+  height: 40px;
+  background-color: rgb(86, 79, 155);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  margin-left: 1em;
+  cursor: pointer;
+}
+
+.start p {
+  margin: 0;
+  font-weight: 600;
+  padding: 0 4px;
+  color: white;
+}
+
+.time {
+  color: white;
+}
+.time p {
+  font-weight: 600;
+  font-size: 20px;
 }
